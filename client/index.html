@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Gruppo&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SyntaxWave Digital</title>
+</head>
+<body>
+    <div class="wrapper flex--column">
+        <header class="header margin--section slide__animation top">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a class="logo--text" href="/">
+                        SyntaxWave Digital
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="normal--text">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header__contacts link--text">
+                    <div>
+                        <a href="mailto:test@example.com">
+                            <img src="./img/mini-icons/mail.png" alt="mail"> test@example.com
+                        </a>
+                    </div>
+                    <!-- <div>
+                        <img src="./img/mini-icons/phone.png" alt="number">
+                        <a href="tel:+1234567890">+1234567890</a>
+                    </div> -->
+                </div>
+            </div>  
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <div class="hero margin--section slide__animation left">
+                    <!-- <img class="hero__image" src="" alt="background"> -->
+                    <div class="hero__text">
+                        <h1 class="hero__title title--text">
+                            Do you want to make a website? Or just a layout? Or even a mail layout?
+                        </h1>
+                        <p class="normal--text">Choose from an assortment of exactly what you need.</p>
+                    </div>
+                </div>
+                <div id="services" class="services slide__animation right">
+                    <div class="services__container margin--section">
+                        <h2 class="services__title titlesection--text margin--title">What services we provide</h2>
+                        <nav class="services__menu">
+                            <ul>
+                                <li class="services__items">
+                                    <div class="services__image">
+                                        <img src="./img/services/publicity.png" alt="advertising-site">
+                                    </div>
+                                    <h3 class="titlesubsecrion--text">Advertising site</h3>
+                                    <p class="normal--text">Develop a simple, if possible one-page website to advertise a product, service or promote other material without the need for a complex website system.</p>
+                                </li>
+                                <li class="services__items">
+                                    <div class="services__image">
+                                        <img src="./img/services/online-shop.png" alt="online-shop">
+                                    </div>
+                                    <h3 class="titlesubsecrion--text">Online shop</h3>
+                                    <p class="normal--text">An online shop for small and medium-sized businesses will be a great idea to promote the product, its convenient sale in a few clicks.</p>
+                                </li>
+                                <li class="services__items">
+                                    <div class="services__image">
+                                        <img src="./img/services/landing.png" alt="landing-pages-layout">
+                                    </div>
+                                    <h3 class="titlesubsecrion--text">Landing pages layout</h3>
+                                    <p class="normal--text">The layout of a beautiful modern landing page can revamp your website and bring new colours to it.</p>
+                                </li>
+                                <li class="services__items">
+                                    <div class="services__image">
+                                        <img src="./img/services/mail-landing.png" alt="mail-layout">
+                                    </div>
+                                    <h3 class="titlesubsecrion--text">Mail layout</h3>
+                                    <p class="normal--text">Very often you need to send a nice email to a customer or potential customer. And it is very important that such an email would not look like a text with links, but a beautiful poster as from the cover of a magazine.</p>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div id="contact" class=" slide__animation contact left">
+                    <div class="contact__container">
+                        <h2 class="contact__title titlesection--text margin--title">Contact us</h2>
+                        <div class="contact__main">
+                            <div class="contact__mail">
+                                <p class="normal--text">
+                                    Once confirmed, an email will be sent to you with all the details and status of your order.
+                                </p>
+                                <form class="main__emailform" action="/api/send-email" method="post">
+                                    <div class="main__eminput">
+                                        <label class="normal--text" for="email">Email</label>
+                                        <input name="email" class="main__emailinput normal--text" type="email" placeholder="Enter mail...">
+                                    </div>
+                                    <div class="main__selinput">
+                                        <select class="normal--text main__selectinput" required name="servise" id="">
+                                            <option value="Select servise" selected disabled>Select servise</option>
+                                            <option value="Advertising site">Advertising site</option>
+                                            <option value="Online shop">Online shop</option>
+                                            <option value="Landing pages layout">Landing pages layout</option>
+                                            <option value="Mail layout">Mail layout</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="main__descinput">
+                                        <label class="normal--text" for="description">Write additional information, if any</label>
+                                        <textarea class="normal--text main__textareainput" placeholder="Write down what you would like to implement, or what you would like to warn us about..." name="description" id=""></textarea>
+                                    </div>
+                                    <div class="main__submit">
+                                        <button class="buttonorlink normal--text" type="submit">
+                                            <img src="./img/contact/email-send.png" alt="mail">
+                                            <span class="">SEND</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="contact__telegram">
+                                <p class="normal--text">
+                                    After clicking the link, you will be taken to a telegram bot where you can specify everything you need to do.
+                                </p>
+                                <div class="contact__telegraminfo">
+                                    <a class="buttonorlink normal--text" href="https://t.me/syntax_wave_digital_bot">
+                                        <img src="./img/contact/telegram.png" alt="telegram">
+                                        <span class="">TELEGRAM</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer slide__animation">
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <div class="footer__contacts link--text">
+                        <a href="mailto:test@example.com">test@example.com</a>
+                    </div>
+                    <a class="logo--text logofooter--text" href="/">
+                        SyntaxWave Digital
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+</html>

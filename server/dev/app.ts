@@ -3,9 +3,11 @@ import { router } from "./routes/emailRouter";
 import { sendEmailController } from "./controllers/emailController";
 import express from "express";
 import path from "path";
+import BodyParser from "body-parser";
 
 const app: express.Application = express();
 const PORT = process.env.PORT || 3000;
+app.use( BodyParser.urlencoded({ extended: true }) );
 
 app.use(express.static(path.join(__dirname, '../../client/')))
 app.use(express.json());

@@ -15,15 +15,21 @@ document.addEventListener( "DOMContentLoaded", () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ email, select, textarea }),
-            })
-
-            const result = await response.json();
+            });
+            const contentType = response.headers.get('Content-Type') || '';
+            let result;
+            if (contentType.includes('application/json')) {
+                result = await response.json();
+            } else {
+                result = await response.text();
+            }
+        
             if (response.ok) {
                 alert('Email sent successfully');
             } else {
-                alert(`Failed to send email: ${result.message}`);
+                const message = result && typeof result === 'object' ? result.message : 'Unknown error';
+                alert(`Failed to send email: ${message}`);
             }
-            
         } catch (error) {
             console.error('Error:', error);
             alert('An error occurred while sending the email');

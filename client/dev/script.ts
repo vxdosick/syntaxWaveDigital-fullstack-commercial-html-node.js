@@ -8,6 +8,11 @@ document.addEventListener( "DOMContentLoaded", () => {
         const email = mainEmailinput.value;
         const select = selectInput.value;
         const textarea = textareaInput.value;
+
+        const jsonData = { email, select, textarea };
+        console.log('JSON to be sent:', jsonData);
+
+        
         try {
             const response = await fetch('/api/send-email', {
                 method: 'POST',
@@ -24,7 +29,7 @@ document.addEventListener( "DOMContentLoaded", () => {
                 result = await response.text();
             }
         
-            if (response.ok) {
+            if (response.ok) {              
                 alert('Email sent successfully');
             } else {
                 const message = result && typeof result === 'object' ? result.message : 'Unknown error';

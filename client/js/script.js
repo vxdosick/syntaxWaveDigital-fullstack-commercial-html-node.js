@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = mainEmailinput.value;
         const select = selectInput.value;
         const textarea = textareaInput.value;
+        const jsonData = { email, select, textarea };
+        console.log('JSON to be sent:', jsonData);
         try {
             const response = yield fetch('/api/send-email', {
                 method: 'POST',
@@ -26,12 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 body: JSON.stringify({ email, select, textarea }),
             });
-            const result = yield response.json();
+            const contentType = response.headers.get('Content-Type') || '';
+            let result;
+            if (contentType.includes('application/json')) {
+                result = yield response.json();
+            }
+            else {
+                result = yield response.text();
+            }
             if (response.ok) {
                 alert('Email sent successfully');
             }
             else {
-                alert(`Failed to send email: ${result.message}`);
+                const message = result && typeof result === 'object' ? result.message : 'Unknown error';
+                alert(`Failed to send email: ${message}`);
             }
         }
         catch (error) {

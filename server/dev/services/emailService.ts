@@ -25,7 +25,7 @@ export async function sendEmail(recipientEmail: string, typeOfWork: string, desc
         console.log("email sent good");
         return info;
     } catch (err) {
-        console.log("email sent bad" + err);
+        console.log("email sent bad " + err);
         throw err;
     }
 }

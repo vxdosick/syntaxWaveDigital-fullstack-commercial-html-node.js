@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendEmailController = sendEmailController;
+exports.sendEmailController = void 0;
 const emailService_1 = require("../services/emailService");
 function sendEmailController(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -26,3 +26,4 @@ function sendEmailController(req, res) {
         }
     });
 }
+exports.sendEmailController = sendEmailController;

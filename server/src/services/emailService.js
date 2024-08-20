@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendEmail = sendEmail;
+exports.sendEmail = void 0;
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const config_1 = require("../config");
 function sendEmail(recipientEmail, typeOfWork, description) {
@@ -40,8 +40,9 @@ function sendEmail(recipientEmail, typeOfWork, description) {
             return info;
         }
         catch (err) {
-            console.log("email sent bad" + err);
+            console.log("email sent bad " + err);
             throw err;
         }
     });
 }
+exports.sendEmail = sendEmail;

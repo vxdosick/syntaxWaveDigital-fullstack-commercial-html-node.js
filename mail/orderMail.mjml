@@ -1,0 +1,25 @@
+<mjml>
+    <mj-body>
+        <mj-section>
+            <mj-column>
+                <mj-text color="red">
+                    test
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section>
+            <mj-column>
+                <mj-text color="pink">
+                    test
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section>
+            <mj-column>
+                <mj-text color="purple">
+                    test
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

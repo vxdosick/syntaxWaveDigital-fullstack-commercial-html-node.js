@@ -2,24 +2,47 @@
     <mj-body>
         <mj-section>
             <mj-column>
-                <mj-text color="red">
-                    test
+                <mj-text color="white">
+                    sdf
+                </mj-text>
+                <mj-text color="white">
+                    sdf
                 </mj-text>
             </mj-column>
-        </mj-section>
-        <mj-section>
             <mj-column>
-                <mj-text color="pink">
-                    test
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+                <mj-text color=white>
+                    sdfsdf
                 </mj-text>
             </mj-column>
-        </mj-section>
-        <mj-section>
             <mj-column>
-                <mj-text color="purple">
-                    test
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+                <mj-text color=white>
+                    sdfsdf
                 </mj-text>
             </mj-column>
+            <mj-column>
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+                <mj-text color=white>
+                    sdfsdf
+                </mj-text>
+            </mj-column>
+            
         </mj-section>
     </mj-body>
 </mjml>

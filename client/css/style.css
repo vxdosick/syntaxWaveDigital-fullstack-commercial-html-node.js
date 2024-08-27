@@ -164,6 +164,17 @@ h1, h2, h3, h4, h5, h6 {
   background-image: linear-gradient(109.6deg, rgba(112, 246, 255, 0.33) 11.2%, rgba(221, 108, 241, 0.26) 42%, rgba(229, 106, 253, 0.71) 71.5%, rgb(123, 183, 253) 100.2%);
 }
 
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .header .header__container {
   padding: 50px 15px;
   border-bottom: 2px solid black;
@@ -238,6 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 420px;
   padding: 10px 20px;
   transition: all 0.3s ease;
+  position: relative;
 }
 .main .main__container .services .services__container .services__menu ul .services__items:hover {
   background-color: rgb(114, 229, 191);
@@ -254,6 +266,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main .main__container .services .services__container .services__menu ul .services__items h3 {
   margin-bottom: 15px;
+}
+.main .main__container .services .services__container .services__menu ul .services__items .services__new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: crimson;
+  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(15deg);
+  animation: scale-up 1s infinite;
 }
 .main .main__container .contact__container {
   margin-bottom: 50px;
